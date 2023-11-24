@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of India?",
+        "answers":[ "New Delhi", "new delhi", "delhi", "Delhi", "New Dehli", "new dehli", "New dehli", "new Delhi", "New delhi", "new Delhi"],
+        "image": "/india.jpg"
+    },
+    {
+        "id": 2,
+        "question": "What is the capital of Spain?",
+        "answer": "Madrid"
+    }
+]
