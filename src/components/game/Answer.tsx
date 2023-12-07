@@ -1,37 +1,28 @@
-"use client";
-import React, { useState } from 'react'
+// Answer.tsx
+import React from 'react';
 
 type AnswerProps = {
-    answerType: string;
-    placeholder?: string;
-    answer: string[];
-    submitAnswer?: () => void;
-}
+  answerType: string;
+  placeholder?: string;
+  answer: string;
+  onAnswerChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+};
 
-const Answer = ({ answerType, placeholder, answer }: AnswerProps) => {
+const Answer = ({ answerType, placeholder, answer, onAnswerChange, onSubmit }: AnswerProps) => {
+  return (
+    <div>
+      <form onSubmit={onSubmit}>
+        <input
+          onChange={onAnswerChange}
+          value={answer}
+          type={answerType}
+          placeholder={placeholder}
+        />
+        <button type='submit'>Submit Answer</button>
+      </form>
+    </div>
+  );
+};
 
-    const [answerState, setAnswerState] = useState('');
-
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        if (answerState === answer) {
-            console.log('Correct answer');
-        } else {
-            console.log('Wrong answer');
-        }
-
-    }
-
-    return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input onChange={(e) => setAnswerState(e.target.value)} type={answerType} placeholder={placeholder} />
-                <button type='submit'>Svar</button>
-            </form>
-        </div>
-    )
-}
-
-export default Answer
+export default Answer;

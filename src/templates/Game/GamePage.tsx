@@ -1,40 +1,50 @@
-import Question from '@/components/game/Question'
-import React from 'react'
-import questionAnswers from "@/lib/question-answers.json"
-import Answer from '@/components/game/Answer'
+"use client";
+import React, { useState } from 'react';
+import Question from '@/components/game/Question';
+import Answer from '@/components/game/Answer';
+import questionAnswers from "@/lib/question-answers.json";
 
 type GameDataType = {
-    id: number;
-    question: string;
-    answers?: string[];
-    image?: string;
+  id: number;
+  question: string;
+  answers?: string[];
+  image?: string;
 }
 
 const GamePage = () => {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [userAnswer, setUserAnswer] = useState('');
 
-    const gameData: GameDataType[] = questionAnswers;
+  const gameData: GameDataType[] = questionAnswers;
+  const currentQuestion = gameData[currentQuestionIndex];
 
-    const answerOptions = () => {
-        const options: number[] = [];
+  const handleAnswerSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-        for (let i = 0; i < (gameData[0].answers?.length ?? 0); i++) {
-            options.push(i);
-        }
+    const lowerCaseUserAnswer = userAnswer.toLowerCase();
 
-        return options;
-    };
-
-
-    const checkAnswer = (answer: string) => {
-
+    if (currentQuestion.answers && currentQuestion.answers.includes(lowerCaseUserAnswer)) {
+      console.log('Correct answer');
+    } else {
+      console.log('Wrong answer');
     }
 
-    return (
-        <div>
-            <Question question={gameData[0].question} image={gameData[0].image} />
-            <Answer answerType='text' placeholder='Indsæt svar her' answer={gameData[0].answers ? [answerOptions()] : []} />
-        </div>
-    )
-}
+    setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+    setUserAnswer('');
+  };
 
-export default GamePage
+  return (
+    <div>
+      <Question question={currentQuestion.question} image={currentQuestion.image} />
+      <Answer
+        answerType='text'
+        placeholder='Insert your answer here'
+        answer={userAnswer}
+        onAnswerChange={(e) => setUserAnswer(e.target.value)}
+        onSubmit={handleAnswerSubmit}
+      />
+    </div>
+  );
+};
+
+export default GamePage;
