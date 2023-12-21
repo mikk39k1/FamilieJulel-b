@@ -7,16 +7,18 @@ const HomePage = () => {
     return (
         <div>
             <div className='h-[200px] flex items-center justify-center'>
-                <h1 className='text-center text-[24px] font-semibold'>{`Velkommen til Familien Lausens Årlige Jule - /Quiz/Underholdnings/Druklegs Spil`}</h1>
+                <h1 className='text-center text-[24px] font-semibold'>{`Velkommen til Familien Lausens Årlige Jule - /Quiz/Underholdnings/Skattejagts Spil`}</h1>
             </div>
 
             <div className='flex justify-center'>
+                
                 <Image
                     src="/familien-lausen.jpg"
                     width={800}
                     height={800}
                     alt="familien lausen"
                 />
+
             </div>
 
             <div className='flex justify-center my-10'>

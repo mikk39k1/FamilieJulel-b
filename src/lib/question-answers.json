@@ -1,13 +1,69 @@
 [
     {
         "id": 1,
-        "question": "What is the capital of India?",
-        "answers":[ "new delhi", "delhi", "new dehli", "dehli"],
+        "question": "Find alle de her kort, gemt omkring i huset. På bagsiden står der et bogstav. Saml alle bogstaverne og find ud af, hvad der står.",
+        "answers":["rensdyr"],
         "image": "/india.jpg"
     },
     {
         "id": 2,
-        "question": "What is the capital of Spain?",
-        "answer": "madrid"
+        "question": "Løs Emoji Rebus'en for at få næste opgave/spørgsmål",
+        "answers": ["home alone", "alene hjemme"],
+        "image": "/rebus-home-alone.jpg"
+    },
+    {
+        "id": 3,
+        "question": "Løs Emoji Rebus'en for at få næste opgave/spørgsmål",
+        "answers": ["driving home for christmas", "im driving home for christmas", "i'm driving home for christmas"],
+        "image": "/rebus-driving-home.jpg"
+    },
+    {
+        "id": 4,
+        "question": "Løs Emoji Rebus'en for at få næste opgave/spørgsmål",
+        "answers": ["et barn er født i behtlehem"],
+        "image": "/rebus-et-barn-er-født.jpg"
+    },
+    {
+        "id": 5,
+        "question": "Find sedlen med 4 forskellige vers fra en julesang. Et ord i hvert vers er blevet fjernet. Find ud af hvilket ord i hvert vers der mangler. De 4 ord dækker alle over et samlet ord som i skal gætte. (Spørg hvis det ikke giver mening)",
+        "answers": ["julegave"],
+        "image": "/julesange-vers.jpg"
+    },
+    {
+        "id": 6,
+        "question": "Find arbejdsnissen og løs hans opgave for at få næste spørgsmål.",
+        "answers": ["julestress"]
+    },
+    {
+        "id": 7,
+        "question": "I juletiden hænger vi Engle i træet, men ingen dæmoner. Find dæmonen og skriv hvad den har i hånden.",
+        "answers": ["trefork", "træfork"]
+    },
+    {
+        "id": 8,
+        "question": "Løs Emoji Rebus'en for at få næste opgave/spørgsmål",
+        "answers": ["jullerup færgeby", "julerup færgeby"],
+        "image": "/rebus-jullerup-færgeby.jpg"
+    },
+    {
+        "id": 9,
+        "question": "Løs Emoji Rebus'en for at få næste opgave/spørgsmål",
+        "answers": ["jullerup færgeby", "julerup færgeby"],
+        "image": "/rebus-jullerup-færgeby.jpg"
+    },
+    {
+        "id": 10,
+        "question": "2 turtelduer, 5 guldringe, 9 dansende damer er alle del af en julesang. Find nissen som gemmer sig “i” det sidste vers a sangen.",
+        "answers": ["juletrommer", "jule tromme"]
+    },
+    {
+        "id": 11,
+        "question": "Juleanden havde engang dun og Harry i Alene hjemme bliver fyldt med dem. En julegris varmer sig i dunet, find den for at komme videre til næste spørgsmål.",
+        "answers": ["skål"]
+    },
+    {
+        "id": 12,
+        "question": "Alkohol er vigtigt i julen, find nisserne som har drukket sig fulde. Forbogstavet på det de har drukket sig fuld i danner et ord. Skriv ordet i feltet for at komme videre.",
+        "answers": ["TBD"]
     }
 ]

@@ -10,10 +10,6 @@ const RulesPage = () => {
             <div className='flex justify-center'>
                 <ul>
                     <li>Man må ikke </li>
-                    <li>Man må ikke </li>
-                    <li>Man må ikke </li>
-                    <li>Man må ikke </li>
-                    <li>Man må ikke </li>
                 </ul>
             </div>
 
